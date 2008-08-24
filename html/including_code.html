@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>The Codex Presentation System</title>
+<!-- metadata -->
+<meta name="generator" content="S5" />
+<meta name="version" content="S5 1.1" />
+<meta name="presdate" content="&date" />
+<meta name="author" content="Dave Thomas" />
+<meta name="organization" content="&organization;" />
+<meta name="company" content="The Pragmatic Programmers, LLC" />
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<link rel="stylesheet" href="../ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="../ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="../lib/stylesheets/print.css" type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="../ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+
+<link rel="stylesheet" href="../lib/stylesheets/pressie.css" type="text/css" />
+
+<!-- S5 JS -->
+<script src="../ui/default/slides.js" type="text/javascript"></script>
+
+<!-- Syntax Highlighter -->
+<link rel="stylesheet"  href="../dp.SyntaxHighlighter/Styles/SyntaxHighlighter.css"></link>
+
+</head>
+<body>
+
+<div class="layout">
+<div id="controls"><!-- DO NOT EDIT --></div>
+<div id="currentSlide"><!-- DO NOT EDIT --></div>
+<div id="header"></div>
+<div id="footer">
+<h2>Copyright &copy; 2008 Dave Thomas</h2>
+</div>
+
+</div>
+
+
+<div class="presentation">
+<div class="slide">
+<h1>Including Code in Slides</h1>
+</div>
+<div class="slide">
+<h1>Including Code in Slides</h1>
+<ul>
+	<li>Write code under <code>code/</code></li>
+	<li>Include it in your slides using <code>:code</code> directives</li>
+</ul>
+<div class="code-normal">
+<pre name="code" class="ruby:nogutter:nocontrols">
+
+:code code/myfile.rb
+</pre></div>
+<ul>
+	<li>The entire contents of <code>code/myfile.rb</code> will be included in the slide</li>
+</ul>
+</div>
+<div class="slide">
+<h1>Including Parts of a Source File</h1>
+<ul>
+	<li>In the source file, use comments containing <code>START:sometag</code> and <code>END:sometag</code></li>
+</ul>
+<div class="code-normal">
+<pre name="code" class="ruby:nogutter:nocontrols">
+
+class SomeClass
+#START:useful-method
+  def my_method
+    puts "hello world"
+  end
+#END:useful-method
+end
+</pre></div>
+<ul>
+	<li>In the slide, reference the tag in square brackets after the file name</li>
+</ul>
+<div class="code-normal">
+<pre name="code" class="ruby:nogutter:nocontrols">
+
+:code code/myfile.rb[useful-method]
+</pre></div>
+</div>
+<div class="slide">
+<h1>Merge Multiple Fragments</h1>
+<div class="code-normal">
+<pre name="code" class="ruby:nogutter:nocontrols">
+
+#START:constructor
+class SomeClass
+
+  def initialize
+    # ...
+  end
+#END:constructor
+     
+  def other_methods...
+  end
+#START:constructor
+end
+#END:constructor
+</pre></div>
+</div>
+<div class="slide">
+<h1>Override Code Language and/or <span class="caps">CSS</span> Class</h1>
+<div class="code-normal">
+<pre name="code" class="ruby:nogutter:nocontrols">
+
+:code code/file.xxx[section lang=name class=name]
+</pre></div>
+<ul>
+	<li>can appear in any order</li>
+	<li><code>lang=</code><em>anything supported by SyntaxHighlighter</em>
+	<ul>
+		<li>look in <code>dp.SyntaxHighlighter/Scripts</code>)</li>
+	</ul></li>
+	<li><code>class=code-large | code-normal | code-small | code-tiny | code-supertiny</code><br />
+                                                                                  <br />
+</div><br />
+<div class="slide"></li>
+</ul>
+<h1>Embedding Code Inline</h1>
+<div class="code-normal">
+<pre name="code" class="ruby:nogutter:nocontrols">
+
+ :inlinecode
+ code that
+ goes inline in slides
+ :endinlinecode
+</pre></div>
+<ul>
+	<li><code>:inlinecode</code> optionally takes <code>lang=xxx</code> and <code>class=xx</code></li>
+</ul>
+<div class="code-normal">
+<pre name="code" class="ruby:nogutter:nocontrols">
+
+ :inlinecode lang=ruby
+    puts "Hello World!"
+ :endinlinecode
+</pre></div>
+</div>
+
+  <!-- Syntax Highlighter -->
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shCore.js"></script>
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shBrushCpp.js"></script>
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shBrushRuby.js"></script>
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shBrushXml.js"></script>
+  <script language="javascript">
+  dp.SyntaxHighlighter.ClipboardSwf = '/flash/clipboard.swf';
+  dp.SyntaxHighlighter.HighlightAll('code');
+  </script>
+</div>
+</body>
+</html>

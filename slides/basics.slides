@@ -1,0 +1,53 @@
+h1. Instalar
+
+* Compilando (./configure && make && make install)
+* Pkg Systems:
+** OS X -> port install git-core
+** Arch -> pacman -S git
+** Centos -> yum install git
+** Ubuntu -> aptitude install git-core
+
+h1. Iniciando
+
+* Hello Git!  
+git config --global user.name "Marcos Piccinini"
+git config --global user.email "x@nofxx.com"
+* git init
+* primeiro commit (e stash!!)
+* git status
+
+h1. Push and pull
+
+* pull   LOCAL <- REMOTO 
+* push   LOCAL -> REMOTO
+ 
+h1. Branch
+
+* criar branch
+* listar branch
+* apagar branch
+* merge e rebase
+
+h1. Presepada
+
+* git reset --soft HEAD^
+* git reset --hard
+** git checkout arquivo
+
+h1. Tools
+
+* .gitignore
+* git tag v0.1
+* tui -> log, status, diff
+* gui -> gitk, git gui
+
+h1. Mais
+
+* github
+* gitosis
+
+h1. That`s all folks
+
+* Agora tu gitas...
+
+
