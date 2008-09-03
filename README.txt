@@ -25,3 +25,5 @@ Para gerar o html use:
 
 Dentro de cada apresentação, a pasta slides contém o texto (markdown), é só editar a vontade.
 A pasta UI contém os css e imagens.
+
+Dica textmate (mac): git://github.com/drnic/codex-tmbundle.git
