@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>The Codex Presentation System</title>
+<!-- metadata -->
+<meta name="generator" content="S5" />
+<meta name="version" content="S5 1.1" />
+<meta name="presdate" content="&date" />
+<meta name="author" content="Dave Thomas" />
+<meta name="organization" content="&organization;" />
+<meta name="company" content="The Pragmatic Programmers, LLC" />
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<link rel="stylesheet" href="../ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="../ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="../lib/stylesheets/print.css" type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="../ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+
+<link rel="stylesheet" href="../lib/stylesheets/pressie.css" type="text/css" />
+
+<!-- S5 JS -->
+<script src="../ui/default/slides.js" type="text/javascript"></script>
+
+<!-- Syntax Highlighter -->
+<link rel="stylesheet"  href="../dp.SyntaxHighlighter/Styles/SyntaxHighlighter.css"></link>
+
+</head>
+<body>
+
+<div class="layout">
+<div id="controls"><!-- DO NOT EDIT --></div>
+<div id="currentSlide"><!-- DO NOT EDIT --></div>
+<div id="header"></div>
+<div id="footer">
+<h2>Copyright &copy; 2008 Dave Thomas</h2>
+</div>
+
+</div>
+
+
+<div class="presentation">
+<div class="slide">
+<h1>Por que testar?</h1>
+</div>
+<div class="slide">
+<h1>Instalando</h1>
+<ul>
+	<li>Slides are created using <a href="http://www.textism.com/tools/textile/">Textile markup</a></li>
+	<li>Code is written as normal source files</li>
+	<li>Slides can embed parts of the source files</li>
+	<li>It&#8217;s all processed into an <span class="caps">HTML</span>-based presentation<br />
+  <br />
+</div><br />
+<div class="slide"></li>
+</ul>
+<h1>Should</h1>
+<ul>
+	<li>should_not_</li>
+	<li>should eql()</li>
+	<li>should be_&#8230;<br />
+*_</li>
+</ul>
+</div>
+<div class="slide">
+<h1>Mais um pouco</h1>
+<ul>
+	<li>Create your slides in <code>slides/xxx.slides</code></li>
+	<li>Write code under <code>code/xxx</code></li>
+	<li>Build the files <code>html/xxx.html</code> by running <code>Rake</code></li>
+</ul>
+</div>
+<div class="slide">
+<h1>Rspec no Rails</h1>
+<ul>
+	<li>./script/plugin install git://github.com/dchelimsky/rspec-rails.git</li>
+	<li>./script/generate rspec</li>
+	<li>./script/generate rspec_scaffold Model (rspec_model, rspec_controller)_</li>
+</ul>
+</div>
+<div class="slide">
+<h1>Mocks e Stubs</h1>
+<ul>
+	<li>Por que?</li>
+	<li>Criando uma mock.</li>
+	<li>Criando um stub.</li>
+</ul>
+<div class="code-small">
+<pre name="code" class="ruby:nogutter:nocontrols">h1. The Codex System
+
+h1. Creating Content
+
+* "The Basics":basics.html
+* "Including Code":including_code.html
+
+h1. Creating Slideshows
+
+* "Building and Displaying HTML":building.html
+
+h1. An Example     
+
+* "Some Sample Slides":example.html
+</pre><p></div><div class="codeurl"><a href="txmt://open?url=file:///Volumes/osx/git/os/screencast_br/rspec/slides/table_of_contents.slides">slides/table_of_contents.slides</a></div></p>
+</div>
+
+  <!-- Syntax Highlighter -->
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shCore.js"></script>
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shBrushCpp.js"></script>
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shBrushRuby.js"></script>
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shBrushXml.js"></script>
+  <script language="javascript">
+  dp.SyntaxHighlighter.ClipboardSwf = '/flash/clipboard.swf';
+  dp.SyntaxHighlighter.HighlightAll('code');
+  </script>
+</div>
+</body>
+</html>
