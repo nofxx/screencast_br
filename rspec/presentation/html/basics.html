@@ -4,12 +4,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-<title>The Codex Presentation System</title>
+<title>rSpec</title>
 <!-- metadata -->
 <meta name="generator" content="S5" />
 <meta name="version" content="S5 1.1" />
 <meta name="presdate" content="&date" />
-<meta name="author" content="Dave Thomas" />
+<meta name="author" content="Marcos Piccinini" />
 <meta name="organization" content="&organization;" />
 <meta name="company" content="The Pragmatic Programmers, LLC" />
 <!-- configuration parameters -->
@@ -45,34 +45,93 @@
 
 <div class="presentation">
 <div class="slide">
-<h1>Por que testar?</h1>
+<h1>rSpec</h1>
+<ul>
+	<li>Ruby</li>
+</ul>
+</div>
+<div class="slide">
+<h1>Por que &#8220;testar&#8221;?</h1>
+<ul>
+	<li>Porque sim.</li>
+	<li>rSpec vs Test Unit</li>
+</ul>
+</div>
+<div class="slide">
+<h1><span class="caps">AAAARR</span> quem?</h1>
+<ul>
+	<li>Framework <span class="caps">BDD</span> ( Behavior Driven Development )</li>
+	<li>rSpec vs Test Unit</li>
+</ul>
+</div>
+<div class="slide">
+<h1>Por que &#8220;testar&#8221;?</h1>
+<ul>
+	<li>Porque sim.</li>
+	<li>rSpec vs Test Unit</li>
+</ul>
+</div>
+<div class="slide">
+<h1>Filosofia</h1>
+<ul>
+	<li>Clareza</li>
+	<li>Passos pequenos</li>
+	<li>Seja um consumidor do seu codigo</li>
+</ul>
 </div>
 <div class="slide">
 <h1>Instalando</h1>
 <ul>
-	<li>Slides are created using <a href="http://www.textism.com/tools/textile/">Textile markup</a></li>
-	<li>Code is written as normal source files</li>
-	<li>Slides can embed parts of the source files</li>
-	<li>It&#8217;s all processed into an <span class="caps">HTML</span>-based presentation<br />
+	<li>sudo gem install rspec ZenTest</li>
+</ul>
+</div>
+<div class="slide">
+<h1>Comandos</h1>
+<ul>
+	<li>describe</li>
+	<li>it</li>
+</ul>
+<p>Rodando:</p>
+<ul>
+	<li>spec <arquivo> <arquivo></li>
+	<li>rake</li>
+	<li>autotest (ZenTest)<br />
   <br />
 </div><br />
 <div class="slide"></li>
 </ul>
-<h1>Should</h1>
+<h1>&#8220;Should&#8221;</h1>
 <ul>
-	<li>should_not_</li>
-	<li>should eql()</li>
-	<li>should be_&#8230;<br />
-*_</li>
+	<li>should</li>
+	<li>should_not</li>
+	<li>should eql() ou ==</li>
+	<li>should be_#{metodo}</li>
+	<li>should have(N).coisas</li>
+	<li>should match(/regex/)</li>
+	<li>should raise_error</li>
+	<li>should respond_to</li>
 </ul>
 </div>
 <div class="slide">
-<h1>Mais um pouco</h1>
+<h1>Algo de Podre no Reino da Ciberdelia</h1>
 <ul>
-	<li>Create your slides in <code>slides/xxx.slides</code></li>
-	<li>Write code under <code>code/xxx</code></li>
-	<li>Build the files <code>html/xxx.html</code> by running <code>Rake</code></li>
+	<li>Classe A usa Classe B.</li>
+	<li>Testar uma view ou um controller.</li>
 </ul>
+</div>
+<div class="slide">
+<h1>Mocks e Stubs</h1>
+<p>TO <span class="caps">THE</span> <span class="caps">RESCUE</span>!</p>
+<ul>
+	<li><span class="caps">MOCK</span> =&gt; <span class="caps">CLASSE</span> do Paraguay.</li>
+</ul>
+<ul>
+	<li><span class="caps">STUB</span> =&gt; <span class="caps">METODO</span> do Paraguay.</li>
+</ul>
+<p>obj = mock(Modelo)</p>
+<p>obj.stub!(:metodo)</p>
+<p>obj.stub!(:metodo).and_return(x)</p>
+<p>obj = mock(Modelo, :metodo =&gt; x)</p>
 </div>
 <div class="slide">
 <h1>Rspec no Rails</h1>
@@ -83,29 +142,11 @@
 </ul>
 </div>
 <div class="slide">
-<h1>Mocks e Stubs</h1>
+<h1>RCov</h1>
 <ul>
-	<li>Por que?</li>
-	<li>Criando uma mock.</li>
-	<li>Criando um stub.</li>
+	<li>rake spec:rcov</li>
+	<li>go <span class="caps">TDD</span>/<span class="caps">BDD</span>!</div></li>
 </ul>
-<div class="code-small">
-<pre name="code" class="ruby:nogutter:nocontrols">h1. The Codex System
-
-h1. Creating Content
-
-* "The Basics":basics.html
-* "Including Code":including_code.html
-
-h1. Creating Slideshows
-
-* "Building and Displaying HTML":building.html
-
-h1. An Example     
-
-* "Some Sample Slides":example.html
-</pre><p></div><div class="codeurl"><a href="txmt://open?url=file:///Volumes/osx/git/os/screencast_br/rspec/slides/table_of_contents.slides">slides/table_of_contents.slides</a></div></p>
-</div>
 
   <!-- Syntax Highlighter -->
   <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shCore.js"></script>

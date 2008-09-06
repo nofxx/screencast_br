@@ -1,0 +1,82 @@
+h1. rSpec
+
+* Ruby
+
+h1. Por que "testar"?
+
+* Porque sim.
+* rSpec vs Test Unit
+
+h1. AAAARR quem?
+
+* Framework BDD ( Behavior Driven Development )
+* rSpec vs Test Unit
+
+h1. Por que "testar"?
+
+* Porque sim.
+* rSpec vs Test Unit
+
+h1. Filosofia
+
+* Clareza
+* Passos pequenos
+* Seja um consumidor do seu codigo
+
+h1. Instalando
+
+* sudo gem install rspec ZenTest
+
+h1. Comandos
+
+* describe 
+* it
+
+Rodando:
+
+* spec <arquivo> <arquivo>
+* rake
+* autotest (ZenTest)
+  
+h1. "Should"
+
+* should
+* should_not
+* should eql() ou ==
+* should be_#{metodo}
+* should have(N).coisas
+* should match(/regex/)
+* should raise_error
+* should respond_to
+
+h1. Algo de Podre no Reino da Ciberdelia
+
+* Classe A usa Classe B.
+* Testar uma view ou um controller.
+
+h1. Mocks e Stubs
+
+TO THE RESCUE!
+
+* MOCK => CLASSE do Paraguay.
+
+* STUB => METODO do Paraguay.
+
+obj = mock(Modelo)
+
+obj.stub!(:metodo)
+
+obj.stub!(:metodo).and_return(x)
+
+obj = mock(Modelo, :metodo => x)
+
+h1. Rspec no Rails
+
+* ./script/plugin install git://github.com/dchelimsky/rspec-rails.git
+* ./script/generate rspec
+* ./script/generate rspec_scaffold Model (rspec_model, rspec_controller)_
+
+h1. RCov
+
+* rake spec:rcov
+* go TDD/BDD!
