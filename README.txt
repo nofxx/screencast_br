@@ -27,3 +27,14 @@ Dentro de cada apresentação, a pasta slides contém o texto (markdown), é só
 A pasta UI contém os css e imagens.
 
 Dica textmate (mac): git://github.com/drnic/codex-tmbundle.git
+
+== Gravar um screencast:
+
+http://www.smashingmagazine.com/2008/08/19/screencasting-how-to-start/
+
+Mac:
+IShowU - http://store.shinywhitebox.com/home/home.html
+
+Linux:
+RecordMyDesktop - http://recordmydesktop.sourceforge.net/about.php
+http://lindesk.com/2008/08/creating-a-screencast-in-linux/
